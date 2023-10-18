@@ -1,3 +1,97 @@
 h1{
-    color: brown;
+    color: rgb(255, 255, 255);
 }
+body{
+    background-image: url('https://images8.alphacoders.com/131/1318500.jpeg'); /* Caminho absoluto a partir da raiz do servidor */
+    background-position: center;
+    border-top: solid 10px rgb(231, 87, 4);
+}
+.main-header{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.main-header p{
+    color: white;
+}
+.main-header ion-icon{
+    color: aliceblue;
+    background-color: rgb(102, 100, 98);
+    padding: 30px;
+    border-radius: 50%;
+}
+
+.main-header ion-icon:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(102, 100, 98);
+}
+
+.main-header div{
+    white-space: nowrap;
+}
+.item{
+    display: inline-block;
+    margin-right: 10px; 
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+table{
+
+    border-radius: 10px;
+}
+tr{ 
+    color: white;
+}
+tr th{ 
+    background-color: rgb(231, 87, 4);
+    border: solid .5px rgb(255, 255, 255);
+    padding-left: 4px;
+    padding-right: 12px;
+}
+tr td{
+    background-color: rgba(0, 0, 0, 0.295);
+    border: solid .5px rgb(255, 255, 255);
+    padding-left: 4px;
+    padding-right: 150px;
+}
+label{
+    color: white;
+}
+footer{
+    color: white;
+}
+
+.active ion-icon{
+    background-color: rgb(255, 255, 255);
+    color: rgb(102, 100, 98);
+}
+
+.acoes{
+    text-align: center;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: white;
+    width: 50%;
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+  }
+  
+
+
+.btoes-acoes{
+    display: inline-block;
+    padding-left: 5px;
+}
+
+   

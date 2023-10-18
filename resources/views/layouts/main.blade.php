@@ -10,6 +10,9 @@
         <script src="/js/script.js"></script>
     </head>
     <body class="container">
+        <div class="admin">
+            <div class="admin-aculto"><h1>Olá, Administrador</h1></div>
+        </div>
         <header class="main-header">
                 <div>
                 <div class="item">

@@ -2,9 +2,9 @@ h1{
     color: rgb(255, 255, 255);
 }
 body{
-    background-image: url('https://images8.alphacoders.com/131/1318500.jpeg'); /* Caminho absoluto a partir da raiz do servidor */
-    background-position: center;
-    border-top: solid 10px rgb(231, 87, 4);
+    background-image: url('../img/backgoundBlack.png'); 
+    background-position: center top; 
+    background-size: 100%;
 }
 .main-header{
     margin-top: 30px;
@@ -80,7 +80,8 @@ footer{
   }
   
   .modal-content {
-    background-color: white;
+    background-color: rgb(53, 50, 50);
+    color: white;
     width: 50%;
     max-width: 400px;
     margin: 100px auto;
@@ -94,4 +95,18 @@ footer{
     padding-left: 5px;
 }
 
-   
+.admin{
+    background-color: rgb(231, 87, 4);
+    padding: 20px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.admin-aculto {
+    display: none; 
+    transition: opacity 3s ease-in-out; 
+}
+
+.admin:hover .admin-aculto {
+    display: block; 
+}

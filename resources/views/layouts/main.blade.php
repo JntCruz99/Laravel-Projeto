@@ -23,11 +23,11 @@
                     <p>Cadastro</p>
                 </div>
                     <div class = "item">
-                        <a href=""><ion-icon name="cube-outline" style="font-size: 3rem;"></ion-icon></a>
+                        <a href="/produtos" class="{{ request()->is('produtos') ? 'active' : '' }}"><ion-icon name="cube-outline" style="font-size: 3rem;"></ion-icon></a>
                         <p>Estoque</p>
                     </div>
                     <div class = "item">
-                        <a href=""><ion-icon name="subway-outline" style="font-size: 3rem;"></ion-icon></a>
+                        <a href="/fornecedores" class="{{ request()->is('fornecedores') ? 'active' : '' }}"><ion-icon name="subway-outline" style="font-size: 3rem;"></ion-icon></a>
                         <p>Fornecedor</p>
                     </div>
                     <div class = "item">

@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'HDC DEPOSITO:CADASTRO')
+@section('title', 'HDC DEPOSITO:PRODUTOS')
 
 @section('content')
 <div id="editModal" class="modal">
@@ -8,48 +8,53 @@
         <a class="position-absolute top-0 start-100 translate-middle" onclick="closeEditModal()">
             <ion-icon id="btEditClose" name="close" style="font-size: 2rem;"></ion-icon>
         </a>
-        <h2>Editar Pessoa</h2>
+        <h2>Editar Produto</h2>
         <form id="editForm" method="POST">
             @csrf
             @method('PUT')
             <label for="nome" class="form-label">Nome:</label>
             <input class="form-label" type="text" name="nome" id="edit-nome"><br>
-            <label class="form-label" for="funcao">Função:</label>
-            <input class="form-label" type="text" name="funcao" id="edit-funcao">
+            <label class="form-label" for="quantidade">quantidade:</label>
+            <input class="form-label" type="text" name="quantidade" id="edit-quantidade">
+            <label class="form-label" for="preco">preco:</label>
+            <input class="form-label" type="text" name="preco" id="edit-preco">
             <button class="btn btn-success" type="submit">Salvar Alteracoes</button>
         </form>
     </div>
 </div>
 
 
-
-
 <div id="modal" class="modal">
   <div class="modal-content"><a class="position-absolute top-0 start-100 translate-middle" onclick="closeModal()"><ion-icon id="btDelete" name="close" style="font-size: 2rem;"></ion-icon></a> <h2>Cadastro</h2> 
-    <form action="{{ route('pessoas.store') }}" method="POST">
+    <form action="{{ route('produtos.store') }}" method="POST">
     @csrf 
     <label for="nome" class="form-label">Nome:</label> 
     <input class="form-label" type="text" name="nome" id="nome"><br> 
-    <label class="form-label" for="funcao">Função:</label> 
-    <input class="form-label" type="text" name="funcao" id="funcao"> 
+    <label class="form-label" for="funcao">quantidade:</label> 
+    <input class="form-label" type="text" name="quantidade" id="quantidade"> 
+    <label class="form-label" for="funcao">preco:</label> 
+    <input class="form-label" type="text" name="preco" id="preco"> 
     <button class="btn btn-success" type="submit">Adicionar
       Pessoa</button>
       </form> 
+      </div>
   </div>
-  </div>
-  <table>
+<table>
   <tr>
     <th>ID</th>
     <th>Nome</th>
-    <th>Função</tr> @foreach ($pessoas as $index => $pessoa) <tr>
-      <td>{{ $pessoa->id }}</td>
-      <td>{{ $pessoa->nome }}</td>
-      <td>{{ $pessoa->funcao }}</td> 
+    <th>Quantidade Disponivel</th>
+    <th>Preço Unitario(R$)</th>
+     @foreach ($produtos as $produto) <tr>
+      <td>{{ $produto->id }}</td>
+      <td>{{ $produto->nome }}</td>
+      <td>{{ $produto->quantidade }}</td>
+      <td>{{ $produto->preco }}</td>
       <td class="acoes"> 
         <div class="acoes2">
           <a onclick="openModal()"><ion-icon id="btAdd" name="add" style="font-size: 1rem;"></ion-icon></a> 
-          <a onclick="openEditModal({{ $pessoa}})"
-          class='btoes-acoes'><ion-icon id="btEdit" name="create" style="font-size: 1.2rem;"></ion-icon></a> <form action="{{ route('pessoas.destroy', $pessoa->id) }}" method="POST"
+          <a onclick="openEditModal({{ $produto}})"
+          class='btoes-acoes'><ion-icon id="btEdit" name="create" style="font-size: 1.2rem;"></ion-icon></a> <form action="{{ route('produtos.destroy', $produto->id) }}" method="POST"
           class='btoes-acoes'>
           @csrf
           @method('DELETE')
@@ -63,7 +68,7 @@
 </table>
 
 <script>
-  coopenModalButton = document.getElementById('openModalButton');
+    coopenModalButton = document.getElementById('openModalButton');
   const modal = document.getElementById('modal');
 
   function openModal() { 
@@ -81,16 +86,16 @@ window.addEventListener('click', (event) => {
   }
 });
 
-const editModal = document.getElementById('editModal');
-
-function openEditModal(pessoa) {
-    id = pessoa.id;
-    nome = pessoa.nome;
-    funcao = pessoa.funcao;
+function openEditModal(produto) {
+    id = produto.id;
+    nome = produto.nome;
+    quantidade = produto.quantidade;
+    preco = produto.preco;
 
     document.getElementById('edit-nome').value = nome;
-    document.getElementById('edit-funcao').value = funcao;
-    document.getElementById('editForm').action = `{{ route('pessoas.update', '') }}/${id}`;
+    document.getElementById('edit-quantidade').value = quantidade;
+    document.getElementById('edit-preco').value = preco;
+    document.getElementById('editForm').action = `{{ route('produtos.update', '') }}/${id}`;
     
     editModal.style.display = 'block'; 
 }
@@ -101,8 +106,5 @@ function openEditModal(pessoa) {
 function closeEditModal() {
   editModal.style.display = 'none';
 }
-
 </script>
-
-
 @endsection

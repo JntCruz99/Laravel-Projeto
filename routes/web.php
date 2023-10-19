@@ -13,7 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 use App\Http\Controllers\PessoaController;
-
+use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\FornecedorController;
 
 
 Route::middleware([
@@ -26,7 +27,8 @@ Route::middleware([
     })->name('welcome');
     
     Route::resource('pessoas', PessoaController::class);
-    Route::get('/findUserById/{id}', [PessoaController::class, 'findUserById']);
+    Route::resource('produtos', ProdutoController::class);
+    Route::resource('fornecedores', FornecedorController::class);
 });
 
 

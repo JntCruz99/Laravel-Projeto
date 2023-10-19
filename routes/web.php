@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 use App\Http\Controllers\PessoaController;
 
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -22,7 +24,9 @@ Route::middleware([
     Route::get('/', function () {
         return view('welcome');
     })->name('welcome');
+    
     Route::resource('pessoas', PessoaController::class);
+    Route::get('/findUserById/{id}', [PessoaController::class, 'findUserById']);
 });
 
 

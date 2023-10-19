@@ -53,6 +53,8 @@ tr td{
     border: solid .5px rgb(255, 255, 255);
     padding-left: 4px;
     padding-right: 150px;
+    padding-top: 2px;
+    padding-bottom: 4px;
 }
 label{
     color: white;
@@ -67,7 +69,14 @@ footer{
 }
 
 .acoes{
+    padding: 0;
+    margin: 0;
     text-align: center;
+    padding-right: 4px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border: none;
+    background-color: rgba(240, 248, 255, 0);
 }
 .modal {
     display: none;
@@ -76,11 +85,21 @@ footer{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(231, 87, 4, 0.055);
+    text-align: center;
   }
-  
+.modal form{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.modal button{
+    margin-top: 20px;
+}
+.modal label{
+    margin-top: 15px;
+}
   .modal-content {
-    background-color: rgb(53, 50, 50);
+    background-color: rgba(53, 50, 50, 0.952);
     color: white;
     width: 50%;
     max-width: 400px;
@@ -92,21 +111,61 @@ footer{
 
 .btoes-acoes{
     display: inline-block;
-    padding-left: 5px;
+    padding-left: 0px;
 }
 
 .admin{
     background-color: rgb(231, 87, 4);
-    padding: 20px;
+    padding-left: 20px;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
 }
 
 .admin-aculto {
-    display: none; 
+    opacity: 0;
     transition: opacity 3s ease-in-out; 
+    transition: padding 1s ease-in-out; 
 }
 
 .admin:hover .admin-aculto {
-    display: block; 
+    opacity: 1; 
+    padding: 20px;
+}
+.acoes2{
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 3s ease-in-out; 
+    transition: padding 1s ease-in-out; 
+}
+.acoes2 button{
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+tr:hover .acoes2{
+    opacity: 1; 
+    border: solid .5px rgb(255, 255, 255);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+#btAdd{
+    margin-left: 2px;
+    background-color: rgb(30, 196, 30);
+    color: black;
+    border-radius: 100%;
+    cursor: pointer;
+}
+#btEdit{
+    color: white;
+    margin-top: 3px;
+}
+#btDelete{
+    background-color: rgb(245, 57, 10);
+    color: black;
+    border-radius: 100%;
+    margin-right: 4px;
+    cursor: pointer;
 }

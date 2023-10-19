@@ -28,10 +28,25 @@ class PessoaController extends Controller
         return redirect()->route('pessoas.index');
     }
 
-    public function edit($id)
+    public function edit($id) {
+        $pessoa = $this->findUserById($id);
+        
+        if ($pessoa) {
+            return view('sua_view', compact('pessoa'));
+        } else {
+            return redirect()->route('pagina_de_erro');
+        }
+    }
+
+    public function findUserById($id)
     {
-        $pessoa = Pessoa::findOrFail($id);
-        return view('Pessoa.edit', compact('pessoa'));
+        $pessoa = Pessoa::find($id);
+
+        if ($pessoa) {
+            return $pessoa;
+        } else {
+            return redirect()->route('pagina_de_erro');
+        }
     }
 
     public function update(Request $request, $id)

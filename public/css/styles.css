@@ -56,6 +56,9 @@ tr td{
     padding-top: 2px;
     padding-bottom: 4px;
 }
+.tabela-forn td{
+    padding-right: 20px;
+}
 label{
     color: white;
 }
@@ -116,6 +119,7 @@ footer{
 
 .admin{
     background-color: rgb(231, 87, 4);
+    display: flex;
     padding-left: 20px;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
@@ -123,13 +127,25 @@ footer{
 
 .admin-aculto {
     opacity: 0;
+    display: flex;
     transition: opacity 3s ease-in-out; 
     transition: padding 1s ease-in-out; 
+}
+.admin-aculto button{
+    background-color: rgba(240, 248, 255, 0);
+    border: none;
+}
+.admin-aculto h1{
+    padding-right: 650px;
+}
+.admin-aculto ion-icon{
+    color: white;
 }
 
 .admin:hover .admin-aculto {
     opacity: 1; 
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .acoes2{
     padding: 0;
@@ -161,6 +177,7 @@ tr:hover .acoes2{
 #btEdit{
     color: white;
     margin-top: 3px;
+    cursor: pointer;
 }
 #btDelete{
     background-color: rgb(245, 57, 10);
@@ -169,3 +186,15 @@ tr:hover .acoes2{
     margin-right: 4px;
     cursor: pointer;
 }
+#btEditClose{
+    background-color: rgb(245, 57, 10);
+    color: black;
+    border-radius: 100%;
+    margin-right: 4px;
+    cursor: pointer;
+}
+
+.acoes2-vendas a{
+    margin-right: 5px;
+}
+

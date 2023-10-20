@@ -60,7 +60,7 @@
             <th>Email</th>
         </tr>
         @foreach ($fornecedores as $fornecedor)
-            <tr>
+            <tr class="tabela-forn">
                 <td>{{ $fornecedor->id }}</td>
                 <td>{{ $fornecedor->nome }}</td>
                 <td>{{ $fornecedor->contato }}</td>
@@ -93,12 +93,12 @@
         const modal = document.getElementById('modal');
 
         function openModal() {
-            modal.style display = 'block';
+            modal.style.display = 'block';  
         }
 
         function closeModal() {
-            modal.style display = 'none';
-        }
+    modal.style.display =   'none';
+  }
 
         window.addEventListener('click', (event) => {
             if (event.target === modal) {

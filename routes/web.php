@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PessoaController;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\FornecedorController;
-
+use App\Http\Controllers\VendaController;
 
 Route::middleware([
     'auth:sanctum',
@@ -29,6 +29,7 @@ Route::middleware([
     Route::resource('pessoas', PessoaController::class);
     Route::resource('produtos', ProdutoController::class);
     Route::resource('fornecedores', FornecedorController::class);
+    Route::resource('vendas', VendaController::class);
 });
 
 

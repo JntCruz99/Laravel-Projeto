@@ -13,6 +13,12 @@
     <body class="container">
         <div class="admin">
             <div class="admin-aculto"><h1>Olá, Administrador</h1></div>
+            <div class="admin-aculto">
+            <form method="POST" action="{{ route('logout') }}">
+            @csrf
+            <button type="submit"><ion-icon name="log-out" style="font-size: 3rem;"></ion-icon></button>
+            </form>
+        </div>
         </div>
         <header class="main-header">
                 <div>
@@ -31,14 +37,16 @@
                         <p>Fornecedor</p>
                     </div>
                     <div class = "item">
-                        <a href=""><ion-icon name="bag-remove-outline" style="font-size: 3rem;"></ion-icon></a>
+                        <a href="/vendas" class="{{ request()->is('vendas') ? 'active' : '' }}"><ion-icon name="bag-remove-outline" style="font-size: 3rem;"></ion-icon></a>
                         <p>Vendas</p>
                     </div>
                     
                 </div>
         </header>
+
         @yield('content')
        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
     </body>
 </html>

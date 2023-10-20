@@ -1,0 +1,51 @@
+
+label {
+    font-weight: bold;
+    color: rgb(63, 62, 62);
+}
+
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+
+button[type="submit"] {
+    background-color: #ff4800;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+a {
+    color: #cc6036;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.autentic {
+    background-color: #ffffffec;
+    padding: 50px;
+    padding-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.x-authentication-card-logo {
+    text-align: center; /* Centraliza horizontalmente */
+}

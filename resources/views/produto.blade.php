@@ -14,10 +14,10 @@
             @method('PUT')
             <label for="nome" class="form-label">Nome:</label>
             <input class="form-label" type="text" name="nome" id="edit-nome"><br>
-            <label class="form-label" for="quantidade">quantidade:</label>
-            <input class="form-label" type="text" name="quantidade" id="edit-quantidade">
-            <label class="form-label" for="preco">preco:</label>
-            <input class="form-label" type="text" name="preco" id="edit-preco">
+            <label class="form-label" for="quantidade">Quantidade:</label>
+            <input class="form-label" type="text" name="quantidade" id="edit-quantidade"><br>
+            <label class="form-label" for="preco">Preco:</label>
+            <input class="form-label" type="text" name="preco" id="edit-preco"><br>
             <button class="btn btn-success" type="submit">Salvar Alteracoes</button>
         </form>
     </div>
@@ -30,10 +30,10 @@
     @csrf 
     <label for="nome" class="form-label">Nome:</label> 
     <input class="form-label" type="text" name="nome" id="nome"><br> 
-    <label class="form-label" for="funcao">quantidade:</label> 
-    <input class="form-label" type="text" name="quantidade" id="quantidade"> 
-    <label class="form-label" for="funcao">preco:</label> 
-    <input class="form-label" type="text" name="preco" id="preco"> 
+    <label class="form-label" for="funcao">Quantidade:</label> 
+    <input class="form-label" type="text" name="quantidade" id="quantidade"> <br>
+    <label class="form-label" for="funcao">Preco:</label> 
+    <input class="form-label" type="text" name="preco" id="preco"> <br>
     <button class="btn btn-success" type="submit">Adicionar
       Pessoa</button>
       </form> 
